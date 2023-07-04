@@ -1,0 +1,107 @@
+[
+  {
+    "key": "ADT",
+    "isInVersion": false,
+    "value": "Résultat Audit"
+  },
+  {
+    "key": "BCD",
+    "isInVersion": false,
+    "value": "Bon de commande"
+  },
+  {
+    "key": "BIL",
+    "isInVersion": false,
+    "value": "Post-Mortem (bilan)"
+  },
+  {
+    "key": "COP",
+    "isInVersion": true,
+    "value": "COPIL"
+  },
+  {
+    "key": "CRA",
+    "isInVersion": true,
+    "value": "CR Atelier"
+  },
+  {
+    "key": "DAT",
+    "isInVersion": false,
+    "value": "Document d'architecture"
+  },
+  {
+    "key": "DEX",
+    "isInVersion": false,
+    "value": "Document d'exploitation"
+  },
+  {
+    "key": "FOR",
+    "isInVersion": false,
+    "value": "Document de Formation"
+  },
+  {
+    "key": "FPC",
+    "isInVersion": false,
+    "value": "Plan de cours Formation"
+  },
+  {
+    "key": "GQT",
+    "isInVersion": false,
+    "value": "Gestion de projet"
+  },
+  {
+    "key": "INI",
+    "isInVersion": false,
+    "value": "Réunion Init (kick-off)"
+  },
+  {
+    "key": "LIV",
+    "isInVersion": true,
+    "value": "Document de livraison"
+  },
+  {
+    "key": "OPE",
+    "isInVersion": true,
+    "value": "CR Réunion Opérationnelle"
+  },
+  {
+    "key": "PCL",
+    "isInVersion": false,
+    "value": "Proposition commerciale"
+  },
+  {
+    "key": "PNG",
+    "isInVersion": false,
+    "value": "Planning"
+  },
+  {
+    "key": "PVL",
+    "isInVersion": true,
+    "value": "PV de livraison"
+  },
+  {
+    "key": "PVR",
+    "isInVersion": true,
+    "value": "PV de recette"
+  },
+  {
+    "key": "REC",
+    "isInVersion": false,
+    "value": "Document de recette"
+  },
+  {
+    "key": "REF",
+    "isInVersion": false,
+    "value": "Fiche référence"
+  },
+  {
+    "key": "SFD",
+    "isInVersion": false,
+    "value": "Spécifications fonctionnelles"
+  },
+  {
+    "key": "STD",
+    "isInVersion": false,
+    "value": "Spécifications techniques"
+  }
+]

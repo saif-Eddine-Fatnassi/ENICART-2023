@@ -1,0 +1,94 @@
+[
+  {
+    "group": "Outils ETL",
+    "value": "PDI"
+  },
+  {
+    "group": "Outils ETL",
+    "value": "Talend"
+  },
+  {
+    "group": "Outils ETL",
+    "value": "ODI"
+  },
+  {
+    "group": "Outils ETL",
+    "value": "SSIS"
+  },
+  {
+    "group": "Bases de données",
+    "value": "SQL Server"
+  },
+  {
+    "group": "Bases de données",
+    "value": "Oracle"
+  },
+  {
+    "group": "Bases de données",
+    "value": "Postgres"
+  },
+  {
+    "group": "Bases de données",
+    "value": "DB2/400"
+  },
+  {
+    "group": "Domaines fonctionnels",
+    "value": "RH"
+  },
+  {
+    "group": "Domaines fonctionnels",
+    "value": "Finance"
+  },
+  {
+    "group": "Domaines fonctionnels",
+    "value": "Habitat social"
+  },
+  {
+    "group": "Domaines fonctionnels",
+    "value": "Commerce"
+  },
+  {
+    "group": "Domaines fonctionnels",
+    "value": "Santé"
+  },
+  {
+    "group": "Type du projet",
+    "value": "BialBOX"
+  },
+  {
+    "group": "Type du projet",
+    "value": "Audit"
+  },
+  {
+    "group": "Type du projet",
+    "value": "Refonte SID"
+  },
+  {
+    "group": "Outils de reporting",
+    "value": "PowerBI"
+  },
+  {
+    "group": "Outils de reporting",
+    "value": "BO"
+  },
+  {
+    "group": "Outils de reporting",
+    "value": "Tableau"
+  },
+  {
+    "group": "Outils de reporting",
+    "value": "QilkSense"
+  },
+  {
+    "group": "Technologies",
+    "value": "Cloud"
+  },
+  {
+    "group": "Technologies",
+    "value": "Hybrid"
+  },
+  {
+    "group": "Technologies",
+    "value": "On-Premise"
+  }
+]

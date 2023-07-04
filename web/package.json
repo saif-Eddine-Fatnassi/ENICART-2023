@@ -1,0 +1,104 @@
+{
+  "name": "web",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@ant-design/icons": "^4.2.2",
+    "@craco/craco": "^5.8.0",
+    "@reach/router": "^1.3.4",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
+    "antd": "^4.7.0",
+    "craco-less": "^1.17.0",
+    "moment": "^2.29.1",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "react-helmet": "^6.1.0",
+    "react-highlight-words": "^0.16.0",
+    "react-redux": "^7.2.2",
+    "react-scripts": "^4.0.0",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0",
+    "uuidv4": "^6.2.4"
+  },
+  "scripts": {
+    "start": "PORT=8001 HOST=127.0.0.1 craco start",
+    "build": "craco build --prod && npm install -g serve && PORT=8001 HOST=127.0.0.1 serve -s build",
+    "test": "jest"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "airbnb",
+      "prettier",
+      "prettier/react"
+    ],
+    "plugins": [
+      "react",
+      "jsx-a11y",
+      "import",
+      "prettier"
+    ],
+    "rules": {
+      "semi": [
+        "error",
+        "never"
+      ],
+      "quotes": [
+        "error",
+        "double"
+      ],
+      "array-callback-return": "off",
+      "no-underscore-dangle": "off",
+      "no-console": "off",
+      "max-len": [
+        "error",
+        {
+          "code": 300
+        }
+      ],
+      "react/jsx-filename-extension": [
+        1,
+        {
+          "extensions": [
+            ".js",
+            ".jsx"
+          ]
+        }
+      ],
+      "import/no-unresolved": "off",
+      "react/prop-types": [
+        0
+      ],
+      "linebreak-style": 0
+    }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/plugin-proposal-decorators": "^7.4.4",
+    "@babel/polyfill": "^7.0.0-beta.51",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-react": "^7.0.0-beta.51",
+    "babel-core": "^7.0.0-bridge.0",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-prettier": "^3.2.0",
+    "jest": "^26.6.0",
+    "redux-mock-store": "^1.5.4"
+  }
+}

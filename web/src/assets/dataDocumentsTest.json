@@ -1,0 +1,54 @@
+[
+  {
+    "contract_id": 995,
+    "contract_name": "2149-DS Grenoble / Clermont",
+    "name": "C21-SOPRA-R-GQT-DS Grenoble / Clermont-20210208-1.xlsx",
+    "domain": "C",
+    "type": "GQT",
+    "year": 2021,
+    "date": "2021-02-08T00:00:00",
+    "version": null,
+    "sequentialNumber": 1,
+    "extension": "xlsx",
+    "projectName": "DS Grenoble / Clermont",
+    "creator": "QNN",
+    "creationDate": "2008-09-14T22:53:00",
+    "functionalDomain": ["Habitat social", "Commerce"],
+    "projectType": ["BialBOX", "Audit"],
+    "summary": "bla\nbla\nbli",
+    "techniques": {
+      "etlTools": ["Talend", "ODI"],
+      "databases": ["SQL Server", "Oracle"],
+      "reportingTools": ["BO", "Tableau"]
+    },
+    "keywords": [],
+    "document_id": "602166dd469a0ab791b19215"
+  },
+  {
+    "contract_id": 995,
+    "contract_name": "2149-DS Grenoble / Clermont",
+    "name": "C21-SOPRA-R-DAT-DS Grenoble / Clermont-20210208-1.docx",
+    "domain": "C",
+    "type": "DAT",
+    "year": 2021,
+    "date": "2021-02-08T00:00:00",
+    "version": null,
+    "sequentialNumber": 1,
+    "extension": "docx",
+    "projectName": "DS Grenoble / Clermont",
+    "creator": "QNN",
+    "creationDate": "2008-09-15T10:53:00",
+    "functionalDomain": [],
+    "projectType": [],
+    "summary": "",
+    "techniques": {
+      "etlTools": [],
+      "databases": [],
+      "reportingTools": [],
+      "fonctionnalDomain": [],
+      "projectType": []
+    },
+    "keywords": [],
+    "document_id": "602166ce469a0ab791b19214"
+  }
+]

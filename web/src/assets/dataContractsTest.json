@@ -1,0 +1,58 @@
+[
+  {
+    "contract_id": 1418,
+    "title": "2390-ASSISTANCE ALIMENTATION",
+    "customer_name": "Groupe T2i Suisse SA",
+    "affected_commercials": [
+      {
+        "employeeId": 11,
+        "fullName": "Bruno BESTION",
+        "missionId": 1418,
+        "beginDate": "08/10/2019",
+        "endDate": "31/12/2019"
+      },
+      {
+        "employeeId": 11,
+        "fullName": "Bruno BESTION",
+        "missionId": 1418,
+        "beginDate": "08/10/2019",
+        "endDate": "31/12/2019"
+      }
+    ],
+    "affected_project_managers": [
+      {
+        "employeeId": 11,
+        "fullName": "Bruno BESTION",
+        "missionId": 1418,
+        "beginDate": "08/10/2019",
+        "endDate": "31/12/2019"
+      },
+      {
+        "employeeId": 11,
+        "fullName": "Bruno BESTION",
+        "missionId": 1418,
+        "beginDate": "08/10/2019",
+        "endDate": "31/12/2019"
+      }
+    ],
+    "company": "BIAL-X",
+    "begin_date": "2019/10/8",
+    "end_date": "2020/9/30",
+    "billing_date": null,
+    "status": "Opportunity",
+    "creator": "Matthieu BOUCHET"
+  },
+  {
+    "contract_id": 418,
+    "title": "01",
+    "customer_name": "ORSYS",
+    "affected_commercials": [],
+    "affected_project_managers": null,
+    "company": "BIAL-X",
+    "begin_date": "2018/6/29",
+    "end_date": "2018/6/29",
+    "billing_date": "2018/5/31",
+    "status": "In-progress",
+    "creator": "Mireille LAMARRE"
+  }
+]

@@ -1,0 +1,344 @@
+@import "~antd/dist/antd.less";
+
+/* ########################################################### */
+/* ##                         All                              */
+/* ########################################################### */
+
+//Font and color
+@font-face {
+  font-family: "Orbitron";
+  src: url("assets/Orbitron.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "calibri";
+  src: url("assets/calibri.ttf") format("truetype");
+}
+
+* {
+  font-family: "calibri";
+}
+
+:root {
+  --dia-gray: #cbd1d8;
+  --dia-blue: #5ec2d7;
+  --dia-black: #000000;
+  --dia-dark-blue: #0b204f;
+}
+
+//Button
+.classic-button {
+  margin-bottom: 1%;
+  font-size: 1.15em;
+  height: 2em;
+}
+
+.classic-button-form {
+  margin-bottom: 1%;
+  font-size: 1.15em;
+  height: 2em;
+}
+
+.classic-round-button {
+  margin-bottom: 1%;
+  font-size: 1.15em;
+  height: 2em;
+  width: 2em;
+}
+
+//Table
+.ant-table-cell {
+  font-size: 1.15em;
+}
+
+//Card
+.ant-card-head-title {
+  font-size: 1.15em;
+  font-weight: bold;
+}
+
+.ant-card-bordered {
+  border: 1px solid #d9d9d9;
+}
+
+.ant-card-body {
+  font-size: 1.15em;
+  line-height: 1.7em;
+}
+
+// Modal
+.ant-modal-header {
+  font-size: 1.15em;
+  font-weight: bold;
+}
+
+.ant-modal-body {
+  font-size: 1.15em;
+}
+
+.ant-modal-footer {
+  font-size: 1.15em;
+}
+
+// Tag
+.ant-tag {
+  font-size: 0.95em;
+  height: 2.1em;
+  padding-top: 0.3em;
+}
+
+//Col
+.ant-col {
+  width: 100%;
+}
+
+//Popover
+.ant-popover-title {
+  text-align: center;
+}
+
+//Form
+.ant-input-number {
+  width: 100%;
+}
+
+/* ########################################################### */
+/* ##                       Skeleton                           */
+/* ########################################################### */
+
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.ant-menu.ant-menu-dark {
+  background: #000000;
+}
+
+.site-layout-content {
+  min-height: 280px;
+  padding: 24px;
+  background: #fff;
+  margin: 0px 50px 0px 50px;
+}
+
+@media (max-width: 576px) {
+  .site-layout-content {
+    margin: 0px 15px 0px 15px;
+  }
+}
+
+#components-layout-demo-top .logo {
+  float: left;
+  width: 120px;
+  height: 31px;
+  margin: 16px 24px 16px 0;
+  background: rgba(255, 255, 255, 0.3);
+}
+.ant-row-rtl #components-layout-demo-top .logo {
+  float: right;
+  margin: 16px 0 16px 24px;
+}
+
+/* Top Menu */
+.ant-layout-header.ant-layout-header-custom {
+  background: #000000 0% 0% no-repeat padding-box;
+  position: relative;
+  padding: 0%;
+  outline: solid;
+  outline-color: #cbd1d8;
+  outline-width: 5px;
+  opacity: 1;
+  height: 65px;
+}
+
+.logo {
+  padding: 3px;
+  padding-right: 3px;
+  background-color: #cbd1d8;
+  border-radius: 50%;
+  width: 8em;
+  height: 8em;
+  object-fit: cover;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -4.2em;
+  position: absolute;
+  top: 4.95em;
+  left: 50px;
+}
+
+@media (max-width: 576px) {
+  .logo {
+    visibility: collapse;
+  }
+}
+
+.ant-menu {
+  margin-right: 50px;
+  margin-bottom: 1px;
+  height: 65px;
+}
+
+@media (max-width: 576px) {
+  .ant-menu {
+    margin-right: 15px;
+    margin-bottom: 1px;
+  }
+}
+
+.ant-menu-item-only-child {
+  height: 65px;
+}
+
+.ant-layout-header .header-title {
+  width: 100%;
+  font-size: 0.95em;
+  letter-spacing: 0.22px;
+  color: #cbd1d8;
+  text-align: left;
+}
+
+.header-title_font_family {
+  font-family: "Orbitron" !important;
+}
+
+@media (min-width: 595px) {
+  .ant-layout-header .header-title {
+    font-size: 1em;
+  }
+}
+
+@media (min-width: 680px) {
+  .ant-layout-header .header-title {
+    font-size: 1.15em;
+  }
+}
+
+@media (min-width: 760px) {
+  .ant-layout-header .header-title {
+    font-size: 1.25em;
+  }
+}
+
+@media (min-width: 885px) {
+  .ant-layout-header .header-title {
+    font-size: 1.5em;
+  }
+}
+
+.header-menu {
+  font-size: 1.3em;
+}
+
+@media (max-width: 777px) {
+  .header-menu {
+    font-size: 0em;
+  }
+}
+
+.ant-space.ant-space-horizontal.ant-space-align-center {
+  padding-bottom: 16px;
+}
+
+//Form
+.left-form .ant-form-item-label {
+  text-align: left;
+}
+
+//Divider
+.ant-divider-horizontal {
+  height: 1px;
+}
+
+/* ########################################################### */
+/* ##                   Contract Detail                        */
+/* ########################################################### */
+
+.logo-contract-detail {
+  width: 3em;
+  height: 3em;
+}
+
+.contract-detail .titre {
+  text-align: center;
+  font-size: 1.6em;
+  font-weight: bold;
+}
+
+.contract-detail .ant-timeline-item-content {
+  font-size: 1.15em;
+}
+
+.contract-detail .ant-timeline {
+  height: 9.7em;
+}
+
+.contract-detail .ant-spin-container {
+  font-size: 1.15em;
+}
+
+.contract-detail .ant-list-header {
+  font-size: 1.15em;
+  font-weight: bold;
+}
+
+.contract-detail .ant-table {
+  width: 100%;
+}
+
+/* ########################################################### */
+/* ##                      List Utils                          */
+/* ########################################################### */
+
+.list_utils {
+  width: 20em;
+}
+
+.list_utils .ant-input {
+  font-size: 1.15em;
+}
+
+.list_utils .ant-btn {
+  font-size: 1.15em;
+  width: 100%;
+}
+
+.list_utils .ant-checkbox-group-item {
+  display: block;
+  margin-right: 0;
+  font-size: 1.15em;
+  margin-left: 0.5em;
+}
+
+/* ########################################################### */
+/* ##                   List Documents                         */
+/* ########################################################### */
+
+.list-documents .ant-card-grid {
+  padding: 5px;
+}
+
+.list-documents .grid-style-title {
+  width: 25%;
+  background-color: #fafafa;
+  text-align: center;
+}
+
+.list-documents .grid-style-cell {
+  width: 75%;
+  text-align: center;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ########################################################### */
+/* ##                 Editable tag list                        */
+/* ########################################################### */
+
+.editable-tag-list .ant-input-group-addon {
+  padding: 0;
+}

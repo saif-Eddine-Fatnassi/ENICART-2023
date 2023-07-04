@@ -1,0 +1,12 @@
+[Unit]
+Description=agd-web daemon
+After=network.target
+
+[Service]
+User=azureuser
+Group=www-data
+WorkingDirectory=/media/agd/web
+ExecStart=/usr/bin/npm start
+
+[Install]
+WantedBy=multi-user.target

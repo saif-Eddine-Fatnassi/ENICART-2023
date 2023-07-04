@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.e3d03d09.chunk.css",
+    "main.js": "/static/js/main.a7c1c9ad.chunk.js",
+    "main.js.map": "/static/js/main.a7c1c9ad.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.2d7d9808.js",
+    "runtime-main.js.map": "/static/js/runtime-main.2d7d9808.js.map",
+    "static/js/2.5c101825.chunk.js": "/static/js/2.5c101825.chunk.js",
+    "static/js/2.5c101825.chunk.js.map": "/static/js/2.5c101825.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.e3d03d09.chunk.css.map": "/static/css/main.e3d03d09.chunk.css.map",
+    "static/js/2.5c101825.chunk.js.LICENSE.txt": "/static/js/2.5c101825.chunk.js.LICENSE.txt",
+    "static/media/Icon-Bial-R.b5ccc2da.png": "/static/media/Icon-Bial-R.b5ccc2da.png",
+    "static/media/Icon-Bial-X_2019.4be5fa8c.png": "/static/media/Icon-Bial-X_2019.4be5fa8c.png",
+    "static/media/App.less": "/static/media/calibri.29c57b05.ttf",
+    "static/media/logo.05dba466.png": "/static/media/logo.05dba466.png",
+    "static/media/searchFilled.1c5bfba7.svg": "/static/media/searchFilled.1c5bfba7.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2d7d9808.js",
+    "static/js/2.5c101825.chunk.js",
+    "static/css/main.e3d03d09.chunk.css",
+    "static/js/main.a7c1c9ad.chunk.js"
+  ]
+}

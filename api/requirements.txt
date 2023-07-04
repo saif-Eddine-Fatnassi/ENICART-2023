@@ -1,0 +1,10 @@
+aiomysql
+asyncio
+fastapi
+starlette
+uvicorn[standard]
+gunicorn
+pydantic
+aiohttp[speedups]
+motor
+pymongo

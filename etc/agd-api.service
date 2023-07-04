@@ -1,0 +1,12 @@
+[Unit]
+Description=agd-api daemon
+After=network.target
+
+[Service]
+User=azureuser
+Group=www-data
+WorkingDirectory=/media/agd/api
+ExecStart=/usr/local/bin/gunicorn --config=gunicorn_config.py main:app
+
+[Install]
+WantedBy=multi-user.target
