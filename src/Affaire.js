@@ -167,7 +167,7 @@ const Affaire = () => {
           <div style={{ margin: "0 auto" }}>
             <div style={{ color: "black", fontSize: "25px" }}>Affaires</div>
             <div style={titleContainerStyle}>
-              <h1 style={titleStyle}>MàJ:</h1>
+              <h1 style={titleStyle}>Aujourd'hui :</h1>
               <span style={dateStyle}>{currentDate}</span>
             </div>
             <Table
