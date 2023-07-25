@@ -345,90 +345,124 @@ const Database = () => {
     setEditingRow(null);
     form.resetFields();
   };
+  const currentDate = new Date().toLocaleDateString("fr-FR", {
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  });
+  const titleStyle = {
+    color: "#000000",
+    fontSize: "15px",
 
-  return (    
-    <div className="App">
-      <div className="button-container">
-        {/* Button on the left */}
-        <Button>Ajouter un nouveau type</Button>
-        {/* Button in the middle */}
-        <Button>Actualiser les metadata</Button>
-        {/* Button on the right */}
-        <Button>Actualiser les données en base</Button>
-      </div> 
-       
-      <div className="table-container">
-        <div className="table-wrapper">
-          <div className="table-grid">
-            {/* First row, first column */}
-            <div className="table-card-container">
-              <Card title="Type de documents" className="table-card">
-                <Table dataSource={dataSource1} pagination={false}>
-                  {columns1.map((column) => (
-                    <Column {...column} key={column.key} />
-                  ))}
-                </Table>
-              </Card>
+    marginTop: "0px",
+    marginBottom: "0px",
+  };
+
+  const dateStyle = {
+    fontSize: "16px",
+    textAlign: "right",
+    marginRight: "10px",
+  };
+  const titleContainerStyle = {
+    display: "flex",
+    justifyContent: "flex-end",
+    alignItems: "center",
+    marginBottom: "10px",
+  };
+  return (
+    <div style={{ background: '#f1f1f1', minHeight: '100vh' }}>
+      <div style={{ margin: '0 50px' }}>
+        <div style={{ margin: '0 auto' }}>
+          <div style={{ color: 'black', fontSize: '25px' }}>Metadata</div>
+          <div style={titleContainerStyle}>
+            <h1 style={titleStyle}>Aujourd'hui :</h1>
+            <span style={dateStyle}>{currentDate}</span>
+          </div>
+        </div>
+      </div>
+      <div className="App">
+        <div className="button-container">
+          {/* Button on the left */}
+          <Button>Ajouter un nouveau type</Button>
+          {/* Button in the middle */}
+          <Button>Actualiser les metadata</Button>
+          {/* Button on the right */}
+          <Button>Actualiser les données en base</Button>
+        </div>
+        <div className="table-container">
+          <div className="table-wrapper">
+            <div className="table-grid">
+              {/* First row, first column */}
+              <div className="table-card-container">
+                <Card title="Type de documents" className="table-card">
+                  <Table dataSource={dataSource1} pagination={false}>
+                    {columns1.map((column) => (
+                      <Table.Column {...column} key={column.key} />
+                    ))}
+                  </Table>
+                </Card>
+              </div>
+
+              {/* First row, second column */}
+              <div className="table-card-container">
+                <Card title="Bases de données" className="table-card">
+                  <Table dataSource={dataSource2} pagination={false}>
+                    {columns2.map((column) => (
+                      <Table.Column {...column} key={column.key} />
+                    ))}
+                  </Table>
+                </Card>
+              </div>
+
+              {/* Second row, first column */}
+              <div className="table-card-container">
+                <Card title="Domaines fonctionnels" className="table-card">
+                  <Table dataSource={dataSource1} pagination={false}>
+                    {columns3.map((column) => (
+                      <Table.Column {...column} key={column.key} />
+                    ))}
+                  </Table>
+                </Card>
+              </div>
+
+              {/* Second row, second column */}
+              <div className="table-card-container">
+                <Card title="Bases de données" className="table-card">
+                  <Table dataSource={dataSource2} pagination={false}>
+                    {columns4.map((column) => (
+                      <Table.Column {...column} key={column.key} />
+                    ))}
+                  </Table>
+                </Card>
+              </div>
+
+              {/* Third row, first column */}
+              <div className="table-card-container">
+                <Card title="Progiciel" className="table-card">
+                  <Table dataSource={dataSource1} pagination={false}>
+                    {columns5.map((column) => (
+                      <Table.Column {...column} key={column.key} />
+                    ))}
+                  </Table>
+                </Card>
+              </div>
+
+              {/* Third row, second column */}
+              <div className="table-card-container">
+                <Card title="Outils ETL" className="table-card">
+                  <Table dataSource={dataSource2} pagination={false}>
+                    {columns5.map((column) => (
+                      <Table.Column {...column} key={column.key} />
+                    ))}
+                  </Table>
+                </Card>
+              </div>
             </div>
-      
-            {/* First row, second column */}
-            <div className="table-card-container">
-              <Card title="Bases de données" className="table-card">
-                <Table dataSource={dataSource2} pagination={false}>
-                  {columns2.map((column) => (
-                    <Column {...column} key={column.key} />
-                  ))}
-                </Table>
-              </Card>
-            </div>
-      
-            {/* Second row, first column */}
-            <div className="table-card-container">
-              <Card title="Domaines fonctionnels" className="table-card">
-                <Table dataSource={dataSource1} pagination={false}>
-                  {columns3.map((column) => (
-                    <Column {...column} key={column.key} />
-                  ))}
-                </Table>
-              </Card>
-            </div>
-      
-            {/* Second row, second column */}
-            <div className="table-card-container">
-              <Card title="Bases de données" className="table-card">
-                <Table dataSource={dataSource2} pagination={false}>
-                  {columns4.map((column) => (
-                    <Column {...column} key={column.key} />
-                  ))}
-                </Table>
-              </Card>
-            </div>
-      
-            {/* Third row, first column */}
-            <div className="table-card-container">
-              <Card title="Progiciel" className="table-card">
-                <Table dataSource={dataSource1} pagination={false}>
-                  {columns5.map((column) => (
-                    <Column {...column} key={column.key} />
-                  ))}
-                </Table>
-              </Card>
-            </div>
-      
-            {/* Third row, second column */}
-            <div className="table-card-container">
-              <Card title="Outils ETL" className="table-card">
-              <Table dataSource={dataSource2} pagination={false}>
-                {columns5.map((column) => (
-                  <Column {...column} key={column.key} />
-                ))}
-              </Table>
-            </Card>
           </div>
         </div>
       </div>
     </div>
-  </div>
-);
-                };
-export default Database ;
+  );
+};
+
+export default Database;

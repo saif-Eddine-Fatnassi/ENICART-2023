@@ -341,9 +341,9 @@ const GestionDocumentaire = () => {
   };
   return (
     <div style={{ background: '#f1f1f1', minHeight: '100vh' }}>
-      <div style={{ margin: '0 50px' }}>
+      <div style={{ margin: '1 50px' }}>
         <div style={{ margin: '0 auto' }}>
-          <div style={{ color: 'black', fontSize: '25px' }}>Affaires</div>
+          <div style={{ color: 'black', fontSize: '25px' }}>Gestion Documentaire</div>
           <div style={titleContainerStyle}>
             <h1 style={titleStyle}>Aujourd'hui :</h1>
             <span style={dateStyle}>{currentDate}</span>
@@ -369,7 +369,7 @@ const GestionDocumentaire = () => {
             </div>
           </Card>
           <div className="table-wrapper">
-            <Card title="Les 5 dernieres affaires dans Fitnet" className="table-card"  >
+            <Card title="Les 5 dernieres affaires dans Fitnet" className="table-card"   >
               <Table dataSource={dataSource1} pagination={false}>
                 {columns1.map((column) => (
                   <Table.Column {...column} key={column.key} />
@@ -417,6 +417,8 @@ const GestionDocumentaire = () => {
           </Form>
         </Modal>
       </div>
+ 
+      
     </div>
   );
 };
