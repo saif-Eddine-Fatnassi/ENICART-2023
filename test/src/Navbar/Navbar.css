@@ -1,0 +1,88 @@
+  /* Navbar Container */
+header {
+    background-color: #000000;
+    padding: 1px;
+  }
+  
+  #tete {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    width: 100px; /* Ajustez cette valeur pour la taille souhaitée du logo */
+    height: auto;}
+
+  .langue {
+    color: #5EC2D7;
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+  }
+  
+  .langue h1 {
+    font-size: 1.8rem;
+    margin-right: 20rem;
+  }
+  
+  .langue a {
+    margin-right: 5.5rem;
+  }
+  
+  /* Menu */
+  .menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .menu ul li {
+    margin-right: 1rem;
+  }
+  
+  .menu ul li a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #5EC2D7;
+  }
+  
+  .menu ul li a:hover {
+    color: #5EC2D7;
+  }
+  
+  /* Icone Menu */
+  #icon {
+    display: none;
+  }
+  
+  /* Menu ouvert pour les écrans mobiles */
+  @media (max-width: 768px) {
+    .logo {
+      width: 30px; /* Ajustez cette valeur pour la taille souhaitée du logo sur les écrans mobiles */
+    }
+  
+    .menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: #661636;
+      display: none;
+      padding: 10px;
+    }
+  
+    .menu.open {
+      display: block;
+    }
+  
+    #icon {
+      display: block;
+      cursor: pointer;
+    }
+  } 
+  
+  
+    
+  

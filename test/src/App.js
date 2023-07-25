@@ -1,66 +1,37 @@
-import React, { useEffect } from "react";
-import { Button, Table } from "antd";
-import logo from "./logo.svg";
 import "./App.css";
-
+import React, { useEffect, useState } from "react";
+import { SearchOutlined } from "@ant-design/icons";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Navbar from "./Navbar.js";
+import GestionDocumentaire from './GestionDocumentaire';
+import Documents from './Documents';
+import Affaire from './Affaire';
+import Database from './Database';
+import { Header } from 'antd/es/layout/layout';
+import { Button, Table, Input,Layout, Space, Card } from "antd";
+const { Footer } = Layout;
 function App() {
-  useEffect(() => {
-    console.log("test");
-    fetch("/ping").then(() => console.log("data"));
-  }, []);
-  const dataSource = [
-    {
-      key: "1",
-      name: "Mike",
-      age: 32,
-      address: "10 Downing Street",
-    },
-    {
-      key: "2",
-      name: "John",
-      age: 42,
-      address: "10 Downing Street",
-    },
-  ];
-
-  const columns = [
-    {
-      title: "Name",
-      dataIndex: "name",
-      key: "name",
-    },
-    {
-      title: "Age",
-      dataIndex: "age",
-      key: "age",
-    },
-    {
-      title: "Address",
-      dataIndex: "address",
-      key: "address",
-    },
-  ];
+ 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          <Button className="button" style={{ color: "red" }}>
-            button
-          </Button>
-          aEdit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-      <Table dataSource={dataSource} columns={columns} />;
-    </div>
+    <>
+      <Navbar />
+     <Routes>
+     <Route exact path="/GestionDocumentaire" element={<GestionDocumentaire/>} />
+
+          <Route exact path="/documents" element={<Documents/>} />
+          <Route exact path="/affaire" element={<Affaire/>} />
+          <Route exact path="/database" element={<Database/>} />
+
+
+          </Routes>
+          <Footer
+        style={{
+          textAlign: 'center',
+        }}
+      >
+       Bial-X 2023
+      </Footer>
+     </> 
   );
 }
 
