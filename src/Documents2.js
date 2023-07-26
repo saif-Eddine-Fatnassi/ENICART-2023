@@ -3,7 +3,11 @@ import { Button, Table, Modal, Input,Space } from "antd";
 import { SearchOutlined, EditOutlined, EyeOutlined,DeleteOutlined } from "@ant-design/icons";
 import "./App.css" ;
 import FormulaireRemplir from "./Formulaire";
+
+
 const Documents2 = () => {
+  //save data table
+  const [selectedRowData, setSelectedRowData] = useState(null);
     //formulaire
     const [showFormulaire, setShowFormulaire] = useState(false);
     const [showSection, setShowSection] = useState(true);
@@ -147,6 +151,7 @@ const Documents2 = () => {
   const handleEdit = (record) => {
     // Implement the logic for editing the row here
     console.log("Edit clicked for record:", record);
+    setSelectedRowData(record);
     setIsModalVisible(false);
   };
 

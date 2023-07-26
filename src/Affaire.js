@@ -180,6 +180,7 @@ const Affaire = () => {
                 console.log("Sorter:", sorter);
               }}
             />
+            
           </div>
         </div>
       </div>

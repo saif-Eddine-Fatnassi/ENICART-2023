@@ -197,3 +197,15 @@ button:active {
   border-radius: 5px;
   cursor: pointer;
 }
+/* App.css */
+
+
+.footer {
+  text-align: center;
+  background-color: #001529;
+  color: #ffffff;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}

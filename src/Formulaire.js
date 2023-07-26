@@ -1,15 +1,30 @@
-import React from "react";
+import React,{ useState } from "react";
 import { Form, Input, Select, DatePicker, Button } from "antd";
-
+import { saveAs } from 'file-saver';
 const { Option } = Select;
 
 const FormulaireCritere = () => {
+  const [formData, setFormData] = useState(null);
+  
   const onFinish = (values) => {
     console.log("Form values:", values);
+    setFormData(values);
+  };
+
+  const exportDocument = () => {
+    if (formData) {
+      let docText = `Form Data:\n`;
+      for (const [key, value] of Object.entries(formData)) {
+        docText += `${key}: ${value}\n`;
+      }
+
+      const blob = new Blob([docText], { type: 'text/plain;charset=utf-8' });
+      saveAs(blob, 'form_data.doc');
+    }
   };
 
   return (
-    <div style={{ display: "flex", flexDirection: "row", height: "100vh", width: "100vw" }}>
+     <div style={{ display: "flex", flexDirection: "row", height: "100vh", width: "100vw" }}>
   {/* Cadre avec les petits titres en gras */}
   <div style={{ flex: 1, border: "1px solid #ccc", borderRadius: "4px", padding: "20px", marginRight: "20px" }}>
     <div style={{ borderBottom: "1px solid #ccc", marginBottom: "10px" }}>
@@ -40,9 +55,14 @@ const FormulaireCritere = () => {
 
           <Form.Item label="Type" name="type" rules={[{ required: true, message: "Veuillez sélectionner un type." }]}>
             <Select placeholder="Sélectionnez un type">
-              <Option value="type1">Type 1</Option>
-              <Option value="type2">Type 2</Option>
-              <Option value="type3">Type 3</Option>
+              <Option value="type1">Résultat Audit</Option>
+              <Option value="type2">Présentation Atelier</Option>
+              <Option value="type3">Bon de commande</Option>
+              <Option value="type1">Post-Mortem(bilan)</Option>
+              <Option value="type1">Note de Cadrage</Option>
+              <Option value="type1">COPIL</Option>
+              <Option value="type1">CR Atelier</Option>
+              <Option value="type1">Document d'architecture</Option>
               {/* Ajoutez les autres options ici */}
             </Select>
           </Form.Item>
@@ -76,8 +96,8 @@ const FormulaireCritere = () => {
 
           <Form.Item label="Nouveaux" name="nouveaux">
             <Select placeholder="Sélectionnez un choix">
-              <Option value="X">X</Option>
-              <Option value="Y">Y</Option>
+              <Option value="X">Créer un nouveau document</Option>
+              <Option value="Y">Créer une nouvelle version</Option>
             </Select>
           </Form.Item>
 
@@ -103,6 +123,8 @@ const FormulaireCritere = () => {
           >
             <Select placeholder="Sélectionnez une extension">
               <Option value="docx">docx</Option>
+              <Option value="docx">xlsx</Option>
+              <Option value="docx">pptx</Option>
               <Option value="pdf">pdf</Option>
               {/* Ajoutez les autres options ici */}
             </Select>
@@ -115,6 +137,9 @@ const FormulaireCritere = () => {
           <Form.Item wrapperCol={{ offset: 6, span: 14 }}>
             <Button type="primary" htmlType="submit">
               Générer le nom du fichier
+            </Button>
+            <Button onClick={exportDocument} style={{ marginLeft: 10 }}>
+              Exporter le document
             </Button>
           </Form.Item>
         </Form>
