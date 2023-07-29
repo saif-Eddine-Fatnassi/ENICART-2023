@@ -8,6 +8,7 @@ import Documents from './Documents';
 import Affaire from './Affaire';
 import Database from './Database';
 import { Header } from 'antd/es/layout/layout';
+import FrontEnd from "./FrontEnd";
 import { Button, Table, Input,Layout, Space, Card } from "antd";
 const { Footer } = Layout;
 function App() {
@@ -21,13 +22,13 @@ function App() {
           <Route exact path="/documents" element={<Documents/>} />
           <Route exact path="/affaire" element={<Affaire/>} />
           <Route exact path="/database" element={<Database/>} />
+          <Route exact path="/FrontEnd" element={<FrontEnd/>} />
+
 
 
           </Routes>
           <Footer
-        style={{
-          textAlign: 'center',
-        }}
+       
       >
        Bial-X 2023
       </Footer>
@@ -36,3 +37,13 @@ function App() {
 }
 
 export default App;
+/* style={{
+  textAlign: 'center',
+  backgroundColor: '#f1f1f1',
+  padding: '10px',
+  textAlign: 'center',
+  position: 'fixed',
+  left: '0',
+  bottom: '0',
+  width: '100%',
+}}*/

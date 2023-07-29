@@ -372,7 +372,7 @@ const Database = () => {
     marginBottom: "10px",
   };
   return (
-    <div style={{ background: '#f1f1f1', minHeight: '100vh' }}>
+   <div style={{ background: '#f1f1f1', minHeight: '100vh' }}>
   <div style={{ margin: '0 50px' }}>
     <div style={{ margin: '0 auto' }}>
       <div style={{ color: 'black', fontSize: '25px' }}>Metadata</div>
@@ -391,76 +391,72 @@ const Database = () => {
       {/* Button on the right */}
       <Button>Actualiser les données en base</Button>
     </div>
-    <div className="table-container">
-      <div className="table-wrapper">
-        {/* Use flexbox here */}
-        <div className="table-grid" style={{ display: 'flex', flexWrap: 'wrap' }}>
-          {/* First row, first column */}
-          <div className="table-card-container" style={{ flex: '1 1 300px', margin: '10px' }}>
-            <Card title="Type de documents" className="table-card">
-              <Table dataSource={dataSource1} pagination={false}>
-                {columns1.map((column) => (
-                  <Table.Column {...column} key={column.key} />
-                ))}
-              </Table>
-            </Card>
-          </div>
+    {/* All tables wrapped in a single container */}
+    <div className="table-container" style={{ display: 'flex', flexWrap: 'wrap', gap: '20px', padding: '10px' }}>
+      {/* First row, first column */}
+      <div className="table-card-container" style={{ flex: '1 1 300px' }}>
+        <Card title="Type de documents" className="table-card">
+          <Table dataSource={dataSource1} pagination={false}>
+            {columns1.map((column) => (
+              <Table.Column {...column} key={column.key} />
+            ))}
+          </Table>
+        </Card>
+      </div>
 
-          {/* First row, second column */}
-          <div className="table-card-container" style={{ flex: '1 1 300px', margin: '10px' }}>
-            <Card title="Bases de données" className="table-card">
-              <Table dataSource={dataSource2} pagination={false}>
-                {columns2.map((column) => (
-                  <Table.Column {...column} key={column.key} />
-                ))}
-              </Table>
-            </Card>
-          </div>
+      {/* First row, second column */}
+      <div className="table-card-container" style={{ flex: '1 1 300px' }}>
+        <Card title="Bases de données" className="table-card">
+          <Table dataSource={dataSource2} pagination={false}>
+            {columns2.map((column) => (
+              <Table.Column {...column} key={column.key} />
+            ))}
+          </Table>
+        </Card>
+      </div>
 
-          {/* Second row, first column */}
-          <div className="table-card-container" style={{ flex: '1 1 300px', margin: '10px' }}>
-            <Card title="Domaines fonctionnels" className="table-card">
-              <Table dataSource={dataSource1} pagination={false}>
-                {columns3.map((column) => (
-                  <Table.Column {...column} key={column.key} />
-                ))}
-              </Table>
-            </Card>
-          </div>
+      {/* Second row, first column */}
+      <div className="table-card-container" style={{ flex: '1 1 300px' }}>
+        <Card title="Domaines fonctionnels" className="table-card">
+          <Table dataSource={dataSource1} pagination={false}>
+            {columns3.map((column) => (
+              <Table.Column {...column} key={column.key} />
+            ))}
+          </Table>
+        </Card>
+      </div>
 
-          {/* Second row, second column */}
-          <div className="table-card-container" style={{ flex: '1 1 300px', margin: '10px' }}>
-            <Card title="Bases de données" className="table-card">
-              <Table dataSource={dataSource2} pagination={false}>
-                {columns4.map((column) => (
-                  <Table.Column {...column} key={column.key} />
-                ))}
-              </Table>
-            </Card>
-          </div>
+      {/* Second row, second column */}
+      <div className="table-card-container" style={{ flex: '1 1 300px' }}>
+        <Card title="Bases de données" className="table-card">
+          <Table dataSource={dataSource2} pagination={false}>
+            {columns4.map((column) => (
+              <Table.Column {...column} key={column.key} />
+            ))}
+          </Table>
+        </Card>
+      </div>
 
-          {/* Third row, first column */}
-          <div className="table-card-container" style={{ flex: '1 1 300px', margin: '10px' }}>
-            <Card title="Progiciel" className="table-card">
-              <Table dataSource={dataSource1} pagination={false}>
-                {columns5.map((column) => (
-                  <Table.Column {...column} key={column.key} />
-                ))}
-              </Table>
-            </Card>
-          </div>
+      {/* Third row, first column */}
+      <div className="table-card-container" style={{ flex: '1 1 300px' }}>
+        <Card title="Progiciel" className="table-card">
+          <Table dataSource={dataSource1} pagination={false}>
+            {columns5.map((column) => (
+              <Table.Column {...column} key={column.key} />
+            ))}
+          </Table>
+        </Card>
+      </div>
 
-          {/* Third row, second column */}
-          <div className="table-card-container" style={{ flex: '1 1 300px', margin: '10px' }}>
-            <Card title="Outils ETL" className="table-card">
-              <Table dataSource={dataSource2} pagination={false}>
-                {columns5.map((column) => (
-                  <Table.Column {...column} key={column.key} />
-                ))}
-              </Table>
-            </Card>
-          </div>
-        </div>
+      {/* Third row, second column */}
+      <div className="table-card-container" style={{ flex: '1 1 300px' }}>
+        <Card title="Outils ETL" className="table-card">
+          <Table dataSource={dataSource2} pagination={false}>
+            {columns5.map((column) => (
+              <Table.Column {...column} key={column.key} />
+            ))}
+          </Table>
+        </Card>
       </div>
     </div>
   </div>

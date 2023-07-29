@@ -38,6 +38,17 @@ const Navbar = () => {
           isPending ? "pending" : isActive ? "active" : ""} >  <FaDatabase/> Meta Data
           </NavLink>
           </li>
+
+          <li>
+              <NavLink
+                to="/FrontEnd" // Replace with the actual route for the FrontEnd component
+                className={({ isActive, isPending }) =>
+                  isPending ? "pending" : isActive ? "active" : ""
+                }
+              >
+                <FaDatabase /> FrontEnd
+              </NavLink>
+            </li>
           </ul>
         </div>
         <div id="icon" onClick={toggleMenu}>

@@ -53,6 +53,7 @@ const Navbar = () => {
                 Meta data
               </a>
             </li>
+            
           </ul>
         </div>
         <div id="icon" onClick={toggleMenu}>
