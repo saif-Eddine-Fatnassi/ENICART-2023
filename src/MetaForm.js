@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Form, Input, Select, DatePicker, Button,Tag } from "antd";
-
+import Invoice from "./PDFDocument";
+import { saveAs } from "file-saver";
 const { Option } = Select;
 
 const MetaForm = () => {
@@ -11,8 +12,38 @@ const MetaForm = () => {
       if (keyword.trim() !== "") {
         setKeywords([...keywords, keyword]);
         setKeyword("");
+        
       }
     };
+    const generateAndDownloadInvoice = async (values) => {
+        // Generate the PDF invoice
+        const pdfBlob = await generateInvoicePDF(values);
+    
+        // Save the PDF as a file
+        saveAs(pdfBlob, "invoice.pdf");
+      };
+    
+      const generateInvoicePDF = async (formData) => {
+        return new Promise((resolve) => {
+          // Call the Invoice component to generate the PDF
+          const pdfData = <Invoice formData={formData} />;
+    
+          // Convert the PDF data to a Blob
+          const pdfAsBlob = new Blob([pdfData], { type: "application/pdf" });
+    
+          resolve(pdfAsBlob);
+        });
+      };
+    
+      const onFinish = async (values) => {
+        console.log("Form values:", values);
+        setFormData(values);
+    
+        // Generate and download the PDF invoice
+        await generateAndDownloadInvoice(values);
+      };
+    
+ 
   const [formData, setFormData] = useState({
     createur: "",
     url: "",
@@ -27,11 +58,6 @@ const MetaForm = () => {
     resume: "",
     motsCles: "",
   });
-
-  const onFinish = (values) => {
-    console.log("Form values:", values);
-    setFormData(values);
-  };
 
   return (
     <div>

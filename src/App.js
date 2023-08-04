@@ -8,8 +8,10 @@ import Documents from './Documents';
 import Affaire from './Affaire';
 import Database from './Database';
 import { Header } from 'antd/es/layout/layout';
-import FrontEnd from "./FrontEnd";
 import { Button, Table, Input,Layout, Space, Card } from "antd";
+import FrontEnd from "./Devis";
+import Devis from "./Devis";
+import MyComponent from "./test_api_call" ;
 const { Footer } = Layout;
 function App() {
  
@@ -22,28 +24,15 @@ function App() {
           <Route exact path="/documents" element={<Documents/>} />
           <Route exact path="/affaire" element={<Affaire/>} />
           <Route exact path="/database" element={<Database/>} />
-          <Route exact path="/FrontEnd" element={<FrontEnd/>} />
-
-
-
-          </Routes>
-          <Footer
-       
-      >
+          <Route exact path="/Devis" element={<Devis/>} />
+          <Route exact path="/MyComponent" element={<MyComponent/>} />
+          
+           </Routes>
+     <Footer>
        Bial-X 2023
-      </Footer>
+     </Footer>
      </> 
   );
 }
 
 export default App;
-/* style={{
-  textAlign: 'center',
-  backgroundColor: '#f1f1f1',
-  padding: '10px',
-  textAlign: 'center',
-  position: 'fixed',
-  left: '0',
-  bottom: '0',
-  width: '100%',
-}}*/

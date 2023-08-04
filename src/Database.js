@@ -5,8 +5,6 @@ import { Helmet } from "react-helmet";
 import Highlighter from "react-highlight-words";
 import "./App.css" ;
 
-
-
 const { Column } = Table;
 const Database = () => {
   const getColumnSearchProps = (dataIndex) => ({

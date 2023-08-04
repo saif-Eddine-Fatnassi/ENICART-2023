@@ -2,14 +2,17 @@ const express = require('express');
 const bodyParser = require('body-parser')
 const path = require('path');
 const app = express();
+const port = process.env.PORT || 8080; // Utilisez le port défini dans l'environnement (utile pour le déploiement) ou 5000 par défaut.
+app.listen(port, () => {
+  console.log(`Le serveur est en cours d'exécution sur le port ${port}`);
+});
+
 app.use(express.static(path.join(__dirname, 'build')));
 
 app.get('/ping', async function (req, res) {
     var myHeaders = new Headers();
 myHeaders.append("Authorization", "Basic aW5mcmFAYmlhbC14LmNvbTpUaWMmVGFjNjk=");
 myHeaders.append("Cookie", "JSESSIONID=73djxdztQXBV-HPov+GTVZoz; f_lb_t=https://10.0.6.68:2443");
-
- 
 
 var requestOptions = {
   method: 'GET',

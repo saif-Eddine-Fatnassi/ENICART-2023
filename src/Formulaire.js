@@ -1,9 +1,13 @@
 import React, { useState } from "react";
 import { Form, Input, Select, DatePicker, Button } from "antd";
 import MetaForm from "./MetaForm";
-const { Option } = Select;
+import PDFDocument from "./PDFDocument";
+import { PDFViewer, PDFDownloadLink, Page, Text, View, Document, StyleSheet } from "@react-pdf/renderer";
 
+const { Option } = Select;
 const FormulaireCritere = () => {
+  const [keywords, setKeywords] = useState([]); // State to manage keywords
+
   
   const [formData, setFormData] = useState(null);
   const [generatedFilename, setGeneratedFilename] = useState(null);
@@ -178,11 +182,15 @@ const FormulaireCritere = () => {
             <Button type="primary" onClick={handleSaveGeneratedFile}>
               Enregistrer
             </Button>
+              {/* PDF DownloadLink */}
+            <PDFDownloadLink document={<PDFDocument formData={formData} generatedFilename={generatedFilename} keywords={keywords} />} fileName="generated_file.pdf">
+      {({ blob, url, loading, error }) => (loading ? "Chargement..." : "Télécharger le PDF")}
+    </PDFDownloadLink>
           </div>
         )}
 
         {/* MetaForm */}
-        {showMetaForm && <MetaForm />}
+        {showMetaForm && <MetaForm keywords={keywords} setKeywords={setKeywords} />} {/* Pass the keywords and setKeywords to MetaForm */}
       </div>
     </div>
   );
