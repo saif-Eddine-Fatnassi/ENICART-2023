@@ -121,6 +121,14 @@ const PdfContent = ({
       });
     }
   }, [logoUrl]);
+  const getCurrentDate = () => {
+    const currentDate = new Date();
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    return currentDate.toLocaleDateString(undefined, options);
+  }
+  
+  const currentDay = getCurrentDate();
+
 
   return (
     <Document>
@@ -146,15 +154,22 @@ const PdfContent = ({
         </View>
 
         {/* Devis and Projet */}
-        <View style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '10px' }}>
-          <View>
-            <Text style={{ fontSize: '18px' }}>DEVIS: {devisValue}</Text>
-            <Text style={{ fontSize: '18px' }}>Projet: {projetValue}</Text>
-          </View>
-          <View style={{ textAlign: 'right' }}>
-            {/* Empty view to maintain layout */}
-          </View>
+        <View >
+          <Text style={{ fontSize: '14px' }} >Nous vous prions de bien vouloir trouver,ci-après, notre proposition:</Text>
+
         </View>
+        <View style={{ marginBottom: 20 }} /> {/* This is the spacer */}
+        <View style={styles.tableContainer}>
+          <Text style={[styles.tableHeaderCell, styles.blueColumn, styles.whiteText, styles.blueColumn]}>Devis</Text>
+          <Text style={[styles.tableHeaderCell, styles.blueColumn, styles.whiteText, styles.blueColumn]}>Projet</Text>
+          <Text style={[styles.tableHeaderCell, styles.blueColumn, styles.whiteText, styles.blueColumn]}>Date</Text>
+        </View>
+        <View style={styles.tableContainer}>
+  <Text style={[styles.tableCell, styles.greyBackground]}>{devisValue}</Text>
+  <Text style={[styles.tableCell, styles.greyBackground]}>{projetValue}</Text>
+  <Text style={[styles.tableCell, styles.greyBackground]}>{getCurrentDate()}</Text>
+</View>
+        
 
         {/* Table */}
         <View style={styles.tableContainer}>
@@ -165,9 +180,9 @@ const PdfContent = ({
         </View>
         {data.map((row, index) => (
           <View style={styles.tableContainer} key={index}>
-            <Text style={[styles.tableCell, styles.greyBackground]}>{row.description}</Text>
-            <Text style={[styles.tableCell, styles.greyBackground]}>{row.quantity}</Text>
-            <Text style={[styles.tableCell, styles.greyBackground]}>{row.unitPrice}</Text>
+            <Text style={[styles.tableCell, styles.greyBackground]}>{row.description1}</Text>
+            <Text style={[styles.tableCell, styles.greyBackground]}>{row.quantity1}</Text>
+            <Text style={[styles.tableCell, styles.greyBackground]}>{row.unitPrice1}</Text>
             <Text style={[styles.tableCell, styles.greyBackground]}>Qté x PU Devis</Text>
           </View>
         ))}
