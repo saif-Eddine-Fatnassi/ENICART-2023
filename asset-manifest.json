@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/ENICART-2023%20/static/css/main.c6c7d791.css",
+    "main.js": "/ENICART-2023%20/static/js/main.2897e96b.js",
+    "static/js/787.0c3f432a.chunk.js": "/ENICART-2023%20/static/js/787.0c3f432a.chunk.js",
+    "static/media/bail.png": "/ENICART-2023%20/static/media/bail.8cb15495797eca8380ea.png",
+    "index.html": "/ENICART-2023%20/index.html",
+    "main.c6c7d791.css.map": "/ENICART-2023%20/static/css/main.c6c7d791.css.map",
+    "main.2897e96b.js.map": "/ENICART-2023%20/static/js/main.2897e96b.js.map",
+    "787.0c3f432a.chunk.js.map": "/ENICART-2023%20/static/js/787.0c3f432a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c6c7d791.css",
+    "static/js/main.2897e96b.js"
+  ]
+}
