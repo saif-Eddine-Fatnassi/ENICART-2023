@@ -11,7 +11,7 @@ import { Header } from 'antd/es/layout/layout';
 import { Button, Table, Input,Layout, Space, Card } from "antd";
 import FrontEnd from "./Devis";
 import Devis from "./Devis";
-import MyComponent from "./test_api_call" ;
+
 const { Footer } = Layout;
 function App() {
  
@@ -24,8 +24,8 @@ function App() {
           <Route exact path="/documents" element={<Documents/>} />
           <Route exact path="/affaire" element={<Affaire/>} />
           <Route exact path="/database" element={<Database/>} />
-          <Route exact path="/Devis" element={<Devis/>} />
-          <Route exact path="/MyComponent" element={<MyComponent/>} />
+          <Route exact path="/devis" element={<Devis/>} />
+       
           
            </Routes>
      <Footer>
