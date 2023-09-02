@@ -1,5 +1,5 @@
 {
-  "homepage": "https://saif-Eddine-Fatnassi.github.io/ENICART-2023 ",
+ 
   "name": "test",
   "version": "0.1.0",
   "private": true,
@@ -22,10 +22,12 @@
     "axios": "^1.4.0",
     "docx": "^8.2.2",
     "docxtemplater": "^3.37.12",
+    "express": "^4.18.2",
     "file-saver": "^2.0.5",
     "html-to-docx": "^1.8.0",
     "html-to-pdfmake": "^2.4.22",
     "mammoth": "^1.6.0",
+    "mongoose": "^7.4.4",
     "pdf-lib": "^1.17.1",
     "pdfmake": "^0.2.7",
     "pizzip": "^3.1.4",
@@ -45,7 +47,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "dev": "nodemon server.js"
   },
   "eslintConfig": {
     "extends": [
@@ -66,6 +69,12 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^6.0.0"
-  }
+    "gh-pages": "^6.0.0",
+    "nodemon": "^2.0.13" 
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "server.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }

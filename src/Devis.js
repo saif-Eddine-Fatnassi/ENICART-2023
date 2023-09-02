@@ -187,8 +187,10 @@ const Devis = () => {
                 : '', // Use selectedOption2 if available
               quantity1: filteredData[0].domains,
               unitPrice1: filteredData[0].web_pages,
+              //okey
             },
           ];
+          
         }
       }
   
@@ -230,71 +232,81 @@ const Devis = () => {
     setRemarque(event.target.value);
   };
 
-  // Function to handle "Enregistrer" button click
-  const handleEnregistrerClick = () => {
-    // Call the function to generate and download the PDF
-    generateAndDownloadPDF();
+  // Define the common docDefinition for both functions
+  const docDefinition = {
+    content: [
+      // ... The content structure ...
+    ],
+    styles: {
+      header: {
+        fontSize: 18,
+        bold: true,
+        margin: [0, 10, 0, 10],
+      },
+      tableHeader: {
+        bold: true,
+      },
+    },
   };
 
   // Function to generate and download the PDF
   const generateAndDownloadPDF = () => {
-    // Define the content for the PDF using pdfMake (or any other PDF generation library)
-    const docDefinition = {
-      content: [
-        // Add other sections of the PDF as needed.
-        {
-          text: "Table Data", // Section title
-          style: "header", // Style for the section title
-        },
-        {
-          table: {
-            // Populate the tableData in the PDF
-            body: [
-              // Table header
-              [
-                { text: "Description", style: "tableHeader" },
-                { text: "Quantité", style: "tableHeader" },
-                { text: "Montant", style: "tableHeader" },
-                { text: "Total", style: "tableHeader" },
-              ],
-              // Table data rows
-              ...tableData.map((row) => [
-                { text: row.description },
-                { text: row.quantity },
-                { text: row.unitPrice },
-                { text: "Qté x PU Devis" }, // Replace this with actual calculation if needed.
-              ]),
-            ],
-          },
-        },
-        // Add other sections of the PDF as needed.
-      ],
-      // Define styles for the PDF content
-      styles: {
-        header: {
-          fontSize: 18,
-          bold: true,
-          margin: [0, 10, 0, 10],
-        },
-        tableHeader: {
-          bold: true,
-        },
-      },
-    };
-
-    // Generate the PDF
+    // Use the docDefinition defined above
     const pdfDocGenerator = pdfMake.createPdf(docDefinition);
-
-    // Download the PDF
     pdfDocGenerator.download("devis.pdf");
   };
+  const handleEnregistrerClick = async () => {
+    console.log("Enregistrer button clicked");
+    try {
+      const currentDate = new Date(); // Exemple : utilisation de la date actuelle
+      console.log("currentDate:", currentDate);
 
+      console.log("REMARQUE:", remarque);
+
+      tableData.forEach((item) => {
+        console.log("quantity1:", item.quantity1[0]);
+        console.log("unitPrice1:", item.unitPrice1[0]);
+        console.log("item.description1:", item.description1);
+      });
+
+      // Convert the quantity1 and unitPrice1 to strings (if necessary)
+      const convertedTableData = tableData.map((item) => ({
+        description1: item.description1,
+        quantity1: item.quantity1[0], // Remove [0]
+        unitPrice1: item.unitPrice1[0], // Remove [0]
+        alpha_two_code: item.alpha_two_code,
+      }));
+
+      const dataToStore = {
+        customerName,
+        defaultAddress,
+        devisValue,
+        projetValue,
+        currentDate: currentDate, // Utilisation de currentDate ici
+        tableData: convertedTableData,
+        remarque: remarque,
+      };
+  
+      // Send the data to your backend API for saving
+      const response = await axios.post("http://localhost:2000/devis/saif", dataToStore);
+  
+      // Check the response and log the appropriate message
+      if (response.status === 201) {
+        console.log("Data saved successfully:", response.data.message);
+      } else {
+        console.error("Error saving Data:", response.data.error);
+      }
+    } catch (error) {
+      console.error("Error saving Data:", error);
+    }
+  };
+  
   return (
     <div>
      <div style={{ display: "flex", justifyContent: "center" }}>
   <div style={{ width: "350px", margin: "0 10px" }}>
     <div style={{ width: "100%", textAlign: "center" }}>
-      <label style={{ color: "#000000" }}>Choix :</label>
+      <label style={{ color: "#000000" }}>Choix 1 :</label>
       <Select
         options={options}
         value={selectedOption}
@@ -357,7 +369,7 @@ const Devis = () => {
             <CustomTable aria-label="customized table">
               <TableHead>
                 <TableRow>
-                  <StyledTableCell align="center">Devis</StyledTableCell>
+                <StyledTableCell align="center">Devis N°</StyledTableCell>
                   <StyledTableCell align="center">Projet</StyledTableCell>
                   <StyledTableCell align="center">Date</StyledTableCell>
                 </TableRow>
@@ -382,26 +394,25 @@ const Devis = () => {
           <CustomTable aria-label="customized table">
             <TableHead>
               <TableRow>
-                <StyledTableCell align="right">Description</StyledTableCell>
-                <StyledTableCell align="right">Quantité</StyledTableCell>
-                <StyledTableCell align="right">Montant</StyledTableCell>
-                <StyledTableCell align="right">Total</StyledTableCell>
+                <StyledTableCell align="center">Description</StyledTableCell>
+                <StyledTableCell align="center">Quantité</StyledTableCell>
+                <StyledTableCell align="center">Montant</StyledTableCell>
+                <StyledTableCell align="center">Total</StyledTableCell>
               </TableRow>
             </TableHead>
             <TableBody>
               {tableData.map((row, index) => (
                 <StyledTableRow key={index}>
                   <StyledTableCell component="th" scope="row">
-                  
                     {row.description1}
                   </StyledTableCell>
-                  <StyledTableCell align="right">
+                  <StyledTableCell align="left">
                     {row.quantity1}
                   </StyledTableCell>
-                  <StyledTableCell align="right">
+                  <StyledTableCell align="left">
                     {row.unitPrice1}
                   </StyledTableCell>
-                  <StyledTableCell align="right">
+                  <StyledTableCell align="left">
                     {/* Use the API data here based on alpha_two_code */}
                     {row.alpha_two_code}
                   </StyledTableCell>
@@ -458,7 +469,7 @@ const Devis = () => {
             )}
           </PDFDownloadLink>
           
-          <button>Enregistrer</button>
+          <button onClick={handleEnregistrerClick}>Enregistrer</button>
         </div>
       </div>
     </div>

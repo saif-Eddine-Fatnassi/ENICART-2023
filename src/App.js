@@ -19,18 +19,15 @@ function App() {
     <>
       <Navbar />
      <Routes>
-     <Route exact path="/GestionDocumentaire" element={<GestionDocumentaire/>} />
-
-          <Route exact path="/documents" element={<Documents/>} />
+     <Route exact path="/gestiongocumentaire" element={<GestionDocumentaire/>} />
+            <Route exact path="/documents" element={<Documents/>} />
           <Route exact path="/affaire" element={<Affaire/>} />
           <Route exact path="/database" element={<Database/>} />
           <Route exact path="/devis" element={<Devis/>} />
        
           
            </Routes>
-     <Footer>
-       Bial-X 2023
-     </Footer>
+     
      </> 
   );
 }

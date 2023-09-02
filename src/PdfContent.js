@@ -1,12 +1,5 @@
 import React from "react";
-import {
-  Document,
-  Page,
-  Text,
-  View,
-  StyleSheet,
-  Image,
-} from "@react-pdf/renderer";
+import {Document,Page,Text,View,StyleSheet,Image,} from "@react-pdf/renderer";
 import axios from "axios";
 import { useEffect, useState } from "react";
 
@@ -116,7 +109,7 @@ const PdfContent = ({
   defaultAddress = "123 Main Street",
   devisValue = "Default Devis Value",
   projetValue = "Default Projet ValueNous vous prions de bien vouloir trouver,ci-après, notre proposition: ",
-  logoUrl,
+  logoUrl="https://agd-web.bial-x.com/static/media/logo.05dba466.png",
   remarque, // Receive the remarque prop here
 }) => {
   const [logoData, setLogoData] = useState(null);

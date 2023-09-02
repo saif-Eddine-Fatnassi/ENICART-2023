@@ -7,6 +7,7 @@ app.listen(port, () => {
   console.log(`Le serveur est en cours d'exécution sur le port ${port}`);
 });
 
+
 app.use(express.static(path.join(__dirname, 'build')));
 
 app.get('/ping', async function (req, res) {
